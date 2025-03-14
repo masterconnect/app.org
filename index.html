@@ -1,93 +1,83 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>App.org</title>
+    <title>App.org - For Sale</title>
     <style>
-        body {
-            font-family: 'Roboto Mono', monospace; /* Modern monospace font */
+        * {
             margin: 0;
-            background: linear-gradient(135deg, #1c1c1c, #0d0d0d); /* Dark gradient background */
-            color: #e0e0e0; /* Off-white text for better contrast */
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #2A4D69, #fff);
+            height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-items: center; /* Center horizontally */
-            min-height: 100vh;
-            overflow: hidden; /* Hide potential scrollbars from animation */
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            color: #fff;
         }
 
-        h1 {
-            font-size: 2.5em; /* Slightly smaller for better balance */
-            margin-bottom: 10px;
-            text-shadow: 0 0 10px rgba(0, 173, 181, 0.5); /* Subtle glow */
+        .hero h1 {
+            font-size: 60px;
+            font-weight: 700;
+            margin-bottom: 15px;
         }
 
-        p {
-            font-size: 1.2em;
-            margin-bottom: 20px;
+        .hero p {
+            font-size: 22px;
+            margin-bottom: 25px;
         }
 
-        a {
-            color: #00adb5; /* Teal/cyan link color */
+        .btn {
+            background: #4ABDAC;
+            color: #fff;
+            padding: 15px 35px;
             text-decoration: none;
-            transition: color 0.3s ease; /* Smooth color transition on hover */
+            border-radius: 30px;
+            font-size: 20px;
+            font-weight: 600;
+            transition: transform 0.2s;
         }
 
-        a:hover {
-            color: #0077b6; /* Darker teal on hover */
+        .btn:hover {
+            transform: scale(1.05);
         }
 
-        /* Animated background lines */
-        .bg-lines {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1; /* Place behind content */
-            overflow: hidden;
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            .btn {
+                padding: 12px 25px;
+                font-size: 16px;
+            }
         }
-
-        .bg-lines span {
-            position: absolute;
-            width: 1px;
-            height: 100%;
-            background: linear-gradient(to bottom, transparent, #00adb5); /* Gradient lines */
-            animation: moveLines 15s linear infinite; /* Adjust speed as needed */
-        }
-
-        @keyframes moveLines {
-            0% { transform: translateY(-100%); }
-            100% { transform: translateY(100%); }
-        }
-
-        /* Generate random line positions */
-        .bg-lines span:nth-child(1) { left: 10%; }
-        .bg-lines span:nth-child(2) { left: 25%; animation-delay: 1s;}
-        .bg-lines span:nth-child(3) { left: 40%; animation-delay: 2s;}
-        .bg-lines span:nth-child(4) { left: 55%; animation-delay: 0.5s;}
-        .bg-lines span:nth-child(5) { left: 70%; animation-delay: 1.5s;}
-        .bg-lines span:nth-child(6) { left: 85%; animation-delay: 2.5s;}
-        /* Add more spans as needed */
-
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="bg-lines">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
-
-    <h1>Serious Inquiries Only</h1>
-    <p>Contact: <a href="mailto:support@app.org">support@APP.org</a></p>
-
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>App.org</h1>
+        <p>The Ultimate Domain for Your Next Big Application</p>
+        <a href="mailto:support@app.org" class="btn">Make an Offer</a>
+    </section>
 </body>
 </html>
